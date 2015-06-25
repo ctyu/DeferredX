@@ -1,0 +1,22 @@
+{
+  "name": "promisex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctyu/PromiseX.git"
+  },
+  "author": "ctyu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ctyu/PromiseX/issues"
+  },
+  "homepage": "https://github.com/ctyu/PromiseX#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
