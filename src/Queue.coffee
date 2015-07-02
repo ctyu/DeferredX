@@ -14,7 +14,7 @@ Queue = () ->
 
 Queue.prototype = 
     'constructor':  Queue
-    'next': ->
+    'get': ->
         this._queue.shift() if !this._lock
     'add': (items) ->
         if !isArray(items)
