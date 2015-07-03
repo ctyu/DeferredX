@@ -14,7 +14,7 @@ Queue = () ->
 
 Queue.prototype = 
     'constructor':  Queue
-    'next': ->
+    'get': ->
         this._queue.shift() if !this._lock
     'add': (items) ->
         if !isArray(items)
@@ -32,3 +32,5 @@ Queue.prototype =
         coreForEach.call(items,(value, _index) -> 
             me.splice(index + _index, 0, value)
         )
+    'size' : () ->
+        this._queue.length
