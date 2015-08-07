@@ -32,3 +32,10 @@ Queue.prototype =
         coreForEach.call(items,(value, _index) -> 
             me.splice(index + _index, 0, value)
         )
+    'remove': (index) ->
+        if index === undefined
+            this.removeAll()
+        else
+            this._queue.splice(index,1);
+    'removeAll': () ->
+        this._queue.length = 0
