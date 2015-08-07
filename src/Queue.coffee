@@ -39,3 +39,5 @@ Queue.prototype =
             this._queue.splice(index,1);
     'removeAll': () ->
         this._queue.length = 0
+    'size' : () ->
+        this._queue.length
