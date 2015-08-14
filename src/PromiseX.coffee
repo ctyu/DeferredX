@@ -24,11 +24,14 @@ Promise = (cb) ->
 
     changeStatus = (chStatus) ->
         if(!statusWeight[status])
-            status = chStatus
+            if chStatus isnt 'Pending'
+                status = chStatus
+                return true
+        return false
 
-    next = (isResolve, value) ->
-        if isResolve
-
+    next = (isResolve, valueOrReason) ->
+        forStatus = isResolve ? 'Fulfilled' : 'Rejected'
+        value = valueOrReason if changeStatus 'Fulfilled'
 
     return {
         then : (onFulfilled, onRejected) ->
